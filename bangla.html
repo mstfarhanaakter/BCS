@@ -2,44 +2,161 @@
 <html lang="bn">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BCS বাংলা পরীক্ষা</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>EduQuiz - Interactive Exam Practice</title>
+<link rel="shortcut icon" href="school.png" type="image/x-icon">
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <!-- 🔹 Navbar Start -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">BCS Exam</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-mortarboard-fill me-2"></i>EduQuiz
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <!-- বাংলা -->
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+
           <li class="nav-item">
-            <a id="bnBtn" class="nav-link" href="bangla.html">বাংলা</a>
+            <a class="nav-link" href="index.html">
+              Home
+            </a>
           </li>
-          <!-- English -->
+
           <li class="nav-item">
-            <a id="enBtn" class="nav-link" href="english.html">English</a>
+            <a id="bnBtn" class="nav-link active-link" href="bangla.html">
+              বাংলা
+            </a>
           </li>
+
+          <li class="nav-item">
+            <a id="enBtn" class="nav-link" href="english.html">
+              English
+            </a>
+          </li>
+
         </ul>
       </div>
+
     </div>
   </nav>
-  <!-- 🔹 Navbar End -->
-    <div class="container my-5">
-        <h1 class="mb-4 text-center">BCS বাংলা পরীক্ষা</h1>
-        <div id="sectionsContainer" class="accordion"></div>
-   <script src="bangla.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-   
+  <!-- Navbar End -->
+
+
+  <!-- Page Header Start -->
+  <header class="exam-header">
+    <div class="container text-center">
+
+      <span class="exam-badge">
+        <i class="bi bi-book me-1"></i> বাংলা Section
+      </span>
+
+      <h1 class="exam-title mt-3">
+        BCS বাংলা Practice
+      </h1>
+
+      <p class="exam-subtitle">
+        বাংলা প্রশ্ন অনুশীলন করুন, উত্তর নির্বাচন করুন এবং সঠিক উত্তর সহজেই যাচাই করুন।
+      </p>
+
+    </div>
+  </header>
+  <!-- Page Header End -->
+
+
+  <!-- Exam Content Start -->
+  <main class="exam-content">
+    <div class="container">
+
+      <div class="exam-info-card mb-4">
+        <div class="row g-3 align-items-center">
+
+          <div class="col-md-4">
+            <div class="info-item">
+              <i class="bi bi-question-circle"></i>
+              <div>
+                <h6>Practice Questions</h6>
+                <p>বাংলা প্রশ্ন ধাপে ধাপে অনুশীলন করুন।</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="info-item">
+              <i class="bi bi-check2-circle"></i>
+              <div>
+                <h6>Instant Checking</h6>
+                <p>উত্তর যাচাই করে প্রস্তুতি উন্নত করুন।</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="info-item">
+              <i class="bi bi-bar-chart-line"></i>
+              <div>
+                <h6>Improve Skills</h6>
+                <p>নিয়মিত অনুশীলনের মাধ্যমে আত্মবিশ্বাস বাড়ান।</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bangla questions will be loaded here from bangla.js -->
+      <div id="sectionsContainer" class="accordion exam-accordion"></div>
+
+    </div>
+  </main>
+  <!-- Exam Content End -->
+
+
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="mb-1">© 2026 BCS Practice Hub</p>
+      <small>Designed for smart exam preparation.</small>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+
+  <!-- Bangla JS -->
+  <script src="bangla.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

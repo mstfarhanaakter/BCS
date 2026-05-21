@@ -1,93 +1,280 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BCS Interactive Exam</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  <style>
-    body { background: #f5f5f7; font-family: 'Noto Sans', sans-serif; }
-    .lang-active { font-weight: bold; color: #ffe066 !important; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduQuiz - Interactive Exam Practice</title>
+  <link rel="shortcut icon" href="school.png" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  
-  <!-- 🔹 Navbar Start -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">BCS Exam</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="bi bi-mortarboard-fill me-2"></i>EduQuiz
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <!-- বাংলা -->
+        <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
-            <a id="bnBtn" class="nav-link" href="bangla.html">বাংলা</a>
+            <a class="nav-link" href="#features">Features</a>
           </li>
-          <!-- English -->
+
           <li class="nav-item">
-            <a id="enBtn" class="nav-link" href="english.html">English</a>
+            <a class="nav-link" href="#practice">Practice</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link btn btn-outline-light btn-sm px-3 ms-lg-3" href="bangla.html">
+              বাংলা
+            </a>
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link btn btn-warning btn-sm px-3 ms-lg-2 text-dark fw-semibold" href="english.html">
+              English
+            </a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- 🔹 Navbar End -->
+  <!-- Navbar End -->
 
-  <div class="container my-5">
-        <h1 class="mb-4 text-center">BCS Exam</h1>
-        <!-- <div id="sectionsContainer" class="accordion"></div> -->
-         <!-- 🔹 Practice Quotes Section -->
-<section id="practice-quotes" class="py-5" style="background: #f0f4f8;">
-  <div class="container text-center">
-    <h2 class="mb-4" style="color: #6f42c1;">💡 Daily Practice Inspiration</h2>
 
-    <div class="quotes-wrapper" style="display: flex; flex-direction: column; gap: 20px; max-width: 700px; margin: 0 auto;">
-      
-      <div class="quote-card p-4 rounded shadow" style="background: #fff; border-left: 5px solid #9d4edd;">
-        <p class="quote-text" style="font-size: 1.1rem; font-weight: 500;">
+  <!-- Hero Section Start -->
+  <header class="hero-section">
+    <div class="container">
+      <div class="row align-items-center min-vh-75">
+        <div class="col-lg-7 text-center text-lg-start">
+          <span class="badge hero-badge mb-3">
+            Interactive Practice Platform
+          </span>
+
+          <h1 class="hero-title">
+            Prepare Smarter for Your <span>BCS Exam</span>
+          </h1>
+
+          <p class="hero-text">
+            Practice Bangla and English questions, check answers instantly,
+            and improve your preparation with a clean and easy-to-use exam system.
+          </p>
+
+          <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap mt-4">
+            <a href="bangla.html" class="btn btn-primary btn-lg px-4">
+              Start Bangla Practice
+            </a>
+
+            <a href="english.html" class="btn btn-outline-dark btn-lg px-4">
+              Start English Practice
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-5 mt-5 mt-lg-0">
+          <div class="hero-card">
+            <div class="hero-card-icon">
+              <i class="bi bi-journal-check"></i>
+            </div>
+
+            <h4>Exam Practice Made Simple</h4>
+            <p>
+              Select a subject, answer questions, check all answers, and track your learning progress easily.
+            </p>
+
+            <div class="stats-box">
+              <div>
+                <h5>2</h5>
+                <small>Languages</small>
+              </div>
+
+              <div>
+                <h5>Instant</h5>
+                <small>Answer Check</small>
+              </div>
+
+              <div>
+                <h5>100%</h5>
+                <small>Practice Focused</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Hero Section End -->
+
+
+  <!-- Features Section Start -->
+  <section id="features" class="section-padding">
+    <div class="container">
+      <div class="section-heading text-center mb-5">
+        <h2>Why Use This Platform?</h2>
+        <p>
+          A simple and organized way to practice exam questions.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <i class="bi bi-translate"></i>
+            <h5>Bangla & English</h5>
+            <p>
+              Practice questions in both Bangla and English sections.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <i class="bi bi-check2-circle"></i>
+            <h5>Instant Answers</h5>
+            <p>
+              Check correct answers quickly after practice.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <i class="bi bi-layers"></i>
+            <h5>Organized Sections</h5>
+            <p>
+              Keep questions structured by subject or category.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <i class="bi bi-phone"></i>
+            <h5>Responsive Design</h5>
+            <p>
+              Works smoothly on mobile, tablet, and desktop screens.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features Section End -->
+
+
+  <!-- Practice Section Start -->
+  <section id="practice" class="practice-section section-padding">
+    <div class="container">
+      <div class="section-heading text-center mb-5">
+        <h2>Choose Your Practice Section</h2>
+        <p>
+          Select a language and start practicing immediately.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          <div class="practice-card">
+            <div class="practice-icon">
+              <i class="bi bi-book"></i>
+            </div>
+
+            <h4>বাংলা Practice</h4>
+            <p>
+              বাংলা প্রশ্ন অনুশীলন করুন এবং আপনার প্রস্তুতি আরও শক্তিশালী করুন।
+            </p>
+
+            <a href="bangla.html" class="btn btn-primary w-100">
+              Start Bangla
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-5">
+          <div class="practice-card">
+            <div class="practice-icon">
+              <i class="bi bi-globe2"></i>
+            </div>
+
+            <h4>English Practice</h4>
+            <p>
+              Improve your English preparation through interactive question practice.
+            </p>
+
+            <a href="english.html" class="btn btn-dark w-100">
+              Start English
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Practice Section End -->
+
+
+  <!-- Quotes Section Start -->
+  <section class="quote-section section-padding">
+    <div class="container">
+      <div class="quote-box text-center">
+        <i class="bi bi-lightbulb-fill quote-icon"></i>
+
+        <h2>Daily Practice Inspiration</h2>
+
+        <p class="quote-text">
           “Practice makes progress, not perfection.”
         </p>
-        <small style="color: #6c757d;">— Anonymous</small>
-      </div>
 
-      <div class="quote-card p-4 rounded shadow" style="background: #fff; border-left: 5px solid #7a2fc0;">
-        <p class="quote-text" style="font-size: 1.1rem; font-weight: 500;">
-          “The more you practice, the luckier you get.”
-        </p>
-        <small style="color: #6c757d;">— Gary Player</small>
+        <small>Stay consistent. Small practice every day creates big improvement.</small>
       </div>
-
-      <div class="quote-card p-4 rounded shadow" style="background: #fff; border-left: 5px solid #9d4edd;">
-        <p class="quote-text" style="font-size: 1.1rem; font-weight: 500;">
-          “অভ্যাসই মানুষকে পূর্ণতা নয়, উন্নতির পথে এগিয়ে দেয়।”
-        </p>
-        <small style="color: #6c757d;">— বাংলা উক্তি</small>
-      </div>
-
-      <div class="quote-card p-4 rounded shadow" style="background: #fff; border-left: 5px solid #7a2fc0;">
-        <p class="quote-text" style="font-size: 1.1rem; font-weight: 500;">
-          “Excellence is not an act, but a habit. Practice builds that habit.”
-        </p>
-        <small style="color: #6c757d;">— Aristotle</small>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
+  <!-- Quotes Section End -->
 
+
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="mb-1">
+        © 2026 BCS Interactive Exam Practice
+      </p>
+
+      <small>
+        Designed for smart exam preparation.
+      </small>
     </div>
+  </footer>
+  <!-- Footer End -->
 
-  
 
-<script src="bangla.js"></script>
-  <script src="english.js"></script>
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  
+
 </body>
 </html>
